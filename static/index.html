@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="application-name" content="Stock Search Application">
+        <meta name="description" content="Stock Information">
+        <meta name="keywords" content="company stock information, stock summary, stock recommendations, latest stock news">
+        <meta name="author" content="Abhay Navada">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+
+        <script src="static/hw6js.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="static/upperHalf.css" />
+        <link rel="stylesheet" type="text/css" href="static/lowerHalf.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <img class="background-img" src="static/img/back.svg" />
+            <h1 class="main-heading">Stock Search</h1>
+            <div class="search-container">
+                <form id="formId" onsubmit="event.preventDefault(); submitQuery();">
+                    <button type="submit" id="submitId"></button>
+                    <div class="inputDiv">
+                        <input type="text" name="search" id="searchId" placeholder="Enter Stock Ticker Symbol" autocomplete="off" required/>
+                    </div>
+                    <button type="reset" id="resetId" onclick="turnOffDisplay();"></button>
+                </form>
+            </div>
+        </div>
+        <div id="errorDiv">
+            <div class="error-content">Error: No record has been found, please enter a valid symbol</div>
+        </div>
+        <div id="toggleDiv">
+            <div class="nav-bar">
+                <button id="firstTab" class="nav-bar-btn nav-bar-btn-color" onclick="openTab(event, 'company')">Company</button>
+                <button id="secondTab" class="nav-bar-btn nav-bar-btn-color" onclick="openTab(event, 'stockSummary')">Stock Summary</button>
+                <button id="thirdTab" class="nav-bar-btn nav-bar-btn-color" onclick="openTab(event, 'charts')">Charts</button>
+                <button id="fourthTab" class="nav-bar-btn nav-bar-btn-color" onclick="openTab(event, 'news')">Latest News</button>
+            </div>
+            <div id="company" class="content">
+                <img id="company-logo" />
+                <table id="company-details">
+                    <tr>
+                        <td class="key1">Company Name</td>
+                        <td class="value1" id="company-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="key1">Stock Ticker Symbol</td>
+                        <td class="value1" id="stock-ticker-symbol"></td>
+                    </tr>
+                    <tr>
+                        <td class="key1">Stock Exchange Code</td>
+                        <td class="value1" id="stock-exchange-code"></td>
+                    </tr>
+                    <tr>
+                        <td class="key1">Company IPO Date</td>
+                        <td class="value1" id="company-ipo-date"></td>
+                    </tr>
+                    <tr>
+                        <td class="key1">Category</td>
+                        <td class="value1" id="category"></td>
+                    </tr>
+                </table>
+            </div>
+              
+            <div id="stockSummary" class="content" style="display:none">
+                <table id="stock-details">
+                    <tr>
+                        <td class="key2">Stock Ticker Symbol</td>
+                        <td class="value2" id="stock-ticker-symbol-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="key2">Trading Day</td>
+                        <td class="value2" id="trading-day"></td>
+                    </tr>
+                    <tr>
+                        <td class="key2">Previous Closing Price</td>
+                        <td class="value2" id="previous-closing-price"></td>
+                    </tr>
+                    <tr>
+                        <td class="key2">Opening Price</td>
+                        <td class="value2" id="opening-price"></td>
+                    </tr>
+                    <tr>
+                        <td class="key2">High Price</td>
+                        <td class="value2" id="high-price"></td>
+                    </tr>
+                    <tr>
+                        <td class="key2">Low Price</td>
+                        <td class="value2" id="low-price"></td>
+                    </tr>
+                    <tr>
+                        <td class="key2">Change</td>
+                        <td class="value2" id="change"><div style="float: left;" id="change-p"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="key2">Percent Change</td>
+                        <td class="value2" id="percent-change"><div style="float: left;" id="percent-change-p"></div></td>
+                    </tr>
+                </table>
+                <div class="recommendation-container">
+                    <div class="strong-sell-text">Strong Sell</div>
+                    <div id="strong-sell"></div>
+                    <div id="sell"></div>
+                    <div id="hold"></div>
+                    <div id="buy"></div>
+                    <div id="strong-buy"></div>
+                    <div class="strong-buy-text">Strong Buy</div>
+                </div>
+                <div id="rec">Recommendation Trends</div>
+            </div>
+              
+            <div id="charts" class="content" style="display:none">
+            </div>
+
+            <div id="news" class="content" style="display:none">
+            </div>
+        </div>
+    </body>
+</html>

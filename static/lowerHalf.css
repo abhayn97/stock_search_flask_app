@@ -1,0 +1,318 @@
+#errorDiv {
+  width: 1400px;
+  height: 460px;
+  display: none;
+  position: relative;
+}
+
+.error-content {
+  background-color: #e0e0e0;
+  width: max-content;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.5;
+  border-radius: 10px;
+  position: absolute;
+  top: 70px;
+  left: 450px;
+}
+
+#toggleDiv {
+  width: 1435px;
+  height: 480px;
+  display: none;
+  position: relative;
+}
+
+.nav-bar {
+  width: 1020px;
+  height: 50px;
+  left: 200px;
+  position: absolute;
+  background-color: #f8f9fa;
+}
+
+.nav-bar-btn {
+  float: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  height: 50px;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: #f8f9fa;
+  opacity: 0.5;
+}
+
+.nav-bar-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-bar-btn-color {
+  background-color: transparent;
+}
+
+.nav-bar-btn-active-color {
+  background-color: #999999 !important;
+}
+
+#company-logo {
+  width: 120px;
+  padding-top: 20px;
+  padding-left: 460px;
+  padding-bottom: 20px;
+}
+
+.key1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  font-weight: bold;
+  width: 250px;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+.value1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  opacity: 0.5;
+  width: 250px;
+  font-size: 14px;
+  padding-left: 5px;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#company-details {
+  margin-left: 265px;
+}
+
+#company {
+  width: 1020px;
+  height: 430px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+#stockSummary {
+  width: 1020px;
+  height: 430px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+#stock-details {
+  margin-top: 20px;
+  margin-left: 350px;
+}
+
+.key2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  font-weight: bold;
+  width: 160px;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+.value2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 160px;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+#stock-ticker-symbol-2 {
+  opacity: 0.5;
+}
+
+#trading-day {
+  opacity: 0.5;
+}
+
+#previous-closing-price {
+  opacity: 0.5;
+}
+
+#opening-price {
+  opacity: 0.5;
+}
+
+#high-price {
+  opacity: 0.5;
+}
+
+#low-price {
+  opacity: 0.5;
+}
+
+#change-p {
+  opacity: 0.5;
+}
+
+#percent-change-p {
+  opacity: 0.5;
+}
+
+.recommendation-container {
+  padding-top: 20px;
+  padding-left: 375px;
+}
+
+.strong-sell-text {
+  float: left;
+  color: #ed2938;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 50px;
+  height: 35px;
+  text-align: center;
+}
+
+#strong-sell {
+  float: left;
+  background-color: #ed2938;
+  width: 35px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
+
+#sell {
+  float: left;
+  background-color: #b25f4a;
+  width: 35px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
+
+#hold {
+  float: left;
+  background-color: #77945c;
+  width: 35px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
+
+#buy {
+  float: left;
+  background-color: #3aca6d;
+  width: 35px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
+
+#strong-buy {
+  float: left;
+  background-color: #00ff80;
+  width: 35px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
+
+.strong-buy-text {
+  float: left;
+  color: #00ff80;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 50px;
+  height: 35px;
+  text-align: center;
+}
+
+#rec {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  opacity: 0.5;
+  clear: left;
+  padding-top: 15px;
+  padding-left: 427px;
+}
+
+#charts {
+  width: 1020px;
+  height: 430px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+#news {
+  width: 1020px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+.news-item {
+  background-color: #f8f9fa;
+  width: 1020px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.news-logo {
+  width: 80px;
+  height: 80px;
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+.news-item-text {
+  float: left;
+}
+
+.headline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding-top: 12px;
+  max-width: 900px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.date {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0;
+  padding-top: 5px;
+  opacity: 0.5;
+}
+
+.link-to-post {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 10px;
+  opacity: 0.5;
+}

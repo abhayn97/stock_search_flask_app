@@ -1,0 +1,109 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  width: 1435px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-img {
+  width: 1700px;
+  object-position: -220px;
+  position: absolute;
+}
+
+.main-heading {
+  padding-top: 20px;
+  padding-left: 640px;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  margin-top: 0;
+  position: absolute;
+}
+
+.search-container {
+  width: max-content;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  border-top: none;
+  border-radius: 8px;
+  top: 60px;
+  left: 440px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.search-container button {
+  width: 25px;
+  height: 25px;
+  border: solid 1px;
+  padding: 0;
+  cursor: pointer;
+  float: left;
+}
+
+#submitId {
+  border: none;
+  background: url("img/search-solid.svg");
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 7px;
+  margin-left: 5px;
+  opacity: 0.2;
+}
+
+#submitId:hover {
+  opacity: 0.5;
+}
+
+.inputDiv {
+  height: 40px;
+  border: 1px solid lightgray;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  float: left;
+  margin-left: 2px;
+}
+
+input {
+  margin-top: 8px;
+  padding-top: 2px;
+  width: 500px;
+  height: 20px;
+  float: left;
+  border: none;
+  opacity: 0.5;
+}
+
+input:focus {
+  outline: none;
+}
+
+#resetId {
+  border: none;
+  margin-top: 7px;
+  margin-right: 5px;
+  margin-left: 4px;
+  background: url("img/times-solid.svg");
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+#resetId:hover {
+  opacity: 0.5;
+}
